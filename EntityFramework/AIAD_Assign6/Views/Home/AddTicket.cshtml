@@ -1,0 +1,37 @@
+﻿@model AIAD_Assign6.Models.Ticket
+
+@{
+    ViewBag.Title = "AddTicket";
+}
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddTicket</h2>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+
+            @using (Html.BeginForm())
+            {
+                <table>
+                    <tr><td>Name: </td><td> @Html.TextBoxFor(x => x.Username)</td></tr>
+                    <tr><td>Age: </td><td> @Html.TextBoxFor(x => x.DateOpened)</td></tr>
+                    <tr><td>Gender: </td><td> @Html.TextBoxFor(x => x.IsClosed)</td></tr>
+
+                </table>
+                <br/><br/>
+
+                <input type="submit" value="Submit" />
+
+
+            }
+
+            </div>
+        </div>
+    </div>
+
+

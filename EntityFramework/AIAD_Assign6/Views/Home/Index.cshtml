@@ -1,0 +1,45 @@
+﻿@model AIAD_Assign6.Models.Globals
+
+@{
+    ViewBag.Title = "Index";
+}
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tickets History 
+    
+    </h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <table class="table-striped">
+                <thead>
+                    <tr>
+                        <td style="font:bolder">UserName</td>
+                        <td>
+                            DateOpened
+                        </td>
+                        <td>   IsClosed</td>
+
+                    </tr>
+                </thead>
+
+                @foreach (var ticket in Model.ListOfTickets)
+                {
+                    <tr>
+                        <td width="500">@ticket.Username</td>
+                        <td width="500">@ticket.DateOpened</td>
+                        <td width="500">@ticket.IsClosed</td>
+
+                    </tr>
+                }
+
+            </table>
+
+            </div>
+        </div>
+    </div>
+
