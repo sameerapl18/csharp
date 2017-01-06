@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs"  Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">  
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="leftdiv">
+        <!--header-->
+   <asp:Panel runat="server" CssClass="bodyheight">
+       
+     <asp:Panel runat="server" class="menubar">
+        <asp:Panel runat="server"  class="circlepadding">
+        <asp:Panel runat="server"  class="circle">...</asp:Panel></asp:Panel>
+        <asp:Panel runat="server"  class="titlepadding">
+    <asp:Panel runat="server"  class="heading">
+        <asp:Panel runat="server"  class="subheading1"><asp:Label runat="server" class="headingfree">FREE</asp:Label>
+        <asp:Label runat="server"  class="headingline">LINE</asp:Label>
+        </asp:Panel>
+    
+        <asp:Panel runat="server"  class="subheading2">CREATIVE STUDIO</asp:Panel></asp:Panel></asp:Panel>
+        <asp:Panel runat="server" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Image runat="server"  src="Images/banner.png" /></asp:Panel>
+        <asp:Panel runat="server"  class="navbar">
+
+     
+           
+          <table class="menutable">      <tr>      <asp:Repeater runat="server" ID="menu"
+          DataSourceID="SiteMapDataSource1">
+               
+            <ItemTemplate>
+                <td>
+                    <asp:HyperLink class="anchor" runat="server"
+                    NavigateUrl='<%# Eval("Url") %>'>
+                    <%# Eval("Title") %></asp:HyperLink>
+                </td>
+            </ItemTemplate>
+                   
+        </asp:Repeater>
+              </tr>
+              </table>
+
+               
+    
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+            
+    
+           
+      
+        </asp:Panel>
+    </asp:Panel>
+        
+        <!--content-->
+         <asp:ContentPlaceHolder id="ContentPlaceHoldersecondsec" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="ContentPlaceHolderthirdsec" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolderProj" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolderAbout" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="ContentPlaceHolderContact" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="ContentPlaceHolderBlog" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        </asp:Panel>
+        <!--footer-->
+       <asp:Panel runat="server" class="footer">
+            <asp:Label runat="server" class="footertext">&copy; 2015 BY LAKSHMI SAMEERA</asp:Label>
+
+        </asp:Panel>
+        <br /><br />
+<br /><br /><br /> 
+    </div>
+       <div class="rightdiv">
+           
+           &nbsp;&nbsp;&nbsp;
+           
+            <asp:Panel runat="server" CssClass="theme">
+              <asp:ObjectDataSource ID="ThemeDataSource" runat="server" 
+ SelectMethod="GetThemes" TypeName="ThemeManager" ></asp:ObjectDataSource>
+
+<asp:DropDownList class="styleSelect" ID="strTheme" runat="server" DataTextField="name" 
+ DataValueField="name" OnSelectedIndexChanged="strTheme_SelectedIndexChanged" 
+ OnDataBound="strTheme_DataBound" DataSourceID="ThemeDataSource" 
+ AutoPostBack="true" RepeatDirection="Vertical" />
+
+        </asp:Panel>
+       </div> 
+    </form>
+    
+</body>
+    
+</html>

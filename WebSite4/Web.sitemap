@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="/basepage.aspx" title="BASE"  description="base">
+    <siteMapNode url="/DefaultAssign3.aspx" title="HOME"  description="home"/>
+  <siteMapNode url="/Proj.aspx" title="PROJECTS"  description="projects"/>
+
+
+  <siteMapNode url="/About.aspx" title="ABOUT"  description="About"/>
+
+  <siteMapNode url="/Contact.aspx" title="CONTACT"  description="contact"/>
+
+  <siteMapNode url="/Blog.aspx" title="BLOG"  description="blog"/>
+
+  </siteMapNode>
+
+</siteMap>
+

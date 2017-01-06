@@ -1,0 +1,278 @@
+﻿body {
+    background-color:gray;
+    
+}
+
+
+
+.styleSelect select {
+  background: transparent;
+  background-color:darkgray;
+   width: 140px;
+    height: 34px;
+  
+  padding: 5px;
+  font-size: 16px;
+ 
+  border: 0;
+  border-radius: 6px;
+  
+  -webkit-appearance: none;
+  color: white;
+}
+
+.styleSelect {
+      -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    width: 140px;
+    height: 34px;
+    overflow: hidden;
+    border-radius: 6px;
+    background: url('../../Images/vec_down_arrow.png') no-repeat right;
+     background-size: 25px 25px;
+     background-color:black;
+     color:white;
+    border: 2px solid #000;
+}
+
+.leftdiv {
+width: 1000px;
+    float:left;
+}
+
+.rightdiv {
+    padding-left:2px;
+width: 200px;
+    float:right;
+}
+.menutable {
+border-spacing:10px;
+}
+
+.anchor {
+
+    color: white;
+    text-decoration:none;
+
+}
+.anchorblue {
+
+    color: #00A9FF;
+
+}
+    .anchor:hover {
+        color:#00A9FF;
+    }
+
+.menubar {
+    background-color:black;
+padding: 2px;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+.circlepadding {
+padding-top:10px;
+padding-right:0px;
+}
+
+.circle{
+  display: flex;
+ height: 45px;
+  width: 45px;
+  font-size: 45px;
+  padding: 0px 10px 20px 10px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 15px;
+  border: 1px solid #00A9FF;
+  background-color:  #00A9FF;
+  color: white;
+  font-weight: bolder;
+}
+
+.titlepadding {
+
+padding-left:0px;
+}
+.heading{
+  font-size: 45px;
+  font-weight: bolder;
+  padding: 25px;
+  padding-left:0px;
+  
+}
+.subheading1 {
+     font-size: 45px;
+  font-weight: bolder;
+}
+.subheading2 {
+ 
+  color:white;
+  font: 15px arial;
+}
+
+
+.headingfree{
+  font: bold 45px impact;
+  color: white;
+}
+.headingline{
+  color:#00A9FF;
+  font: bold 45px impact;
+}
+
+.navbar{
+  padding-top: 40px;
+  color: white;
+}
+
+.secondflex{
+    display:flex;
+
+}
+
+.leftflex {
+    display:flex;
+-webkit-flex: 2;
+    flex: 2;
+    background-image: url('/Images/backdrop.jpg');
+    background-color: white;
+    background-repeat: no-repeat;
+}
+
+.titletext{
+    float: left;
+    padding-top: 60px;
+    padding-left:15px;
+}
+
+.secondheader {
+color:white;
+font:40px impact;
+}
+
+.online {
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex; 
+
+}
+
+.innercircle {
+  font:20px impact;
+  background-color:  #00A9FF;
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height:30px;
+  padding: 15px;   
+  text-align: center;
+
+
+}
+
+.rightflex {
+    display:flex;
+background-color: white;
+
+}
+.thirdflex {
+display:flex;
+-webkit-flex:3;
+
+}
+.thirdflexsub {
+display:flex;
+flex:1;
+padding-left:0px;
+align-content:center;
+}
+.smalltext {
+font-size:small;
+}
+
+.thirdheader {
+
+color:#00A9FF;
+font:30px impact;
+
+}
+
+.thirdimgdiv {
+padding-left:0px;
+ width: 250px;
+    height: 150px;
+}
+.line {
+line-height:10px;
+color: white;
+}
+
+.text {
+color:white;
+font-size:small;
+font-weight:bold;
+}
+
+.textsec {
+color:white;
+font-size:small;
+font-weight:bold;
+}
+
+.footer {
+
+    background-color:black;
+padding: 15px;
+position:absolute;
+padding-bottom:0;
+width:1000px;
+height:30px;
+
+
+}
+
+.bodyheight {
+min-height:1000px;
+}
+
+.footertext {
+color:white;
+font-size:smaller;
+
+
+}
+
+.buttonreadmore {
+background-color:black;
+border-color:black;
+color:white;
+width:100px;
+height:40px;
+}
+   
+ .buttonreadmore:hover {
+text-decoration: underline;
+background-color:black;
+border-color:black;
+color:white;
+width:100px;
+height:40px;
+    
+    }
+
+.theme {
+align-content:flex-end;
+
+}
