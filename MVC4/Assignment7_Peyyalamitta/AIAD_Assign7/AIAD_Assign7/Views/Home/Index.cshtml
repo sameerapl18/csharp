@@ -1,0 +1,55 @@
+﻿@model AIAD_Assign7.Models.Globals
+
+
+@{
+    ViewBag.Title = "Index";
+}
+@{
+
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<h2 style="color:white">
+    Tickets History
+
+</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <table class="table-striped" style="font-size:large" align="center">
+                <thead>
+                    <tr style="font-weight:bolder">
+                        <td style="font:bolder">UserName</td>
+                        <td>
+                            DateOpened
+                        </td>
+                        <td>   Status</td>
+                        <td>   Priority</td>
+
+                    </tr>
+                </thead>
+                <tr><td>&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+
+                @foreach (var ticket in Model.ListOfTickets)
+                {
+                    <tr>
+                        <td width="400">@ticket.Username</td>
+                        <td width="400">@ticket.DateOpened.ToShortDateString() </td> 
+                        <td width="400">@ticket.Status</td>
+                        <td width="400">@ticket.Priority</td>
+
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+

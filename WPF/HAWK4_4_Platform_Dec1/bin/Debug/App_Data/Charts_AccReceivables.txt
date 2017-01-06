@@ -1,0 +1,19 @@
+**1 AccountsReceivables Chart
+Chart AccountsReceivables Bar
+Data  X1Values  =  customerID  from  AccountsReceivable where  DocType = 59  
+Data  Y1Values  =  currentBlance  from  AccountsReceivable where  DocType = 59
+Comment  params  LegendText  ExtName  Color  Format
+Params  X1Values  customer customerID  Red N
+Params  Y1Values  Balance  currentBlance  Black  c 
+end
+**2 AccountsReceivables Dues Chart
+Chart AccountsReceivables Bar
+Data  X1Values  =  customerID  from  AccountsReceivable where  DocType = 59 
+Data  Y1Values  =  currentBlance  from  AccountsReceivable where  DocType = 59
+Data  Y2Values  =  TotalAmountPaid from  AccountsReceivable where  DocType = 59
+Comment  params  LegendText    ExtName      Color  Format
+Params  X1Values  customer customerID  Red    N
+Params  Y1Values  Balance      currentBlance  Black  c 
+Params  Y2Values  Total_Amount TotalAmountPaid Black  c
+end
+**end

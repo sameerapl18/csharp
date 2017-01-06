@@ -1,0 +1,19 @@
+**1 AccountsPayable Chart
+Chart AccountsPayable  Bar
+Data  X1Values  =  supplier_ID  from  AccPayables  where  DocType = 53  
+Data  Y1Values  =  Balance  from  AccPayables where  DocType = 53
+Comment  params  LegendText  ExtName  Color  Format
+Params  X1Values  supplier   supplier_ID  Red N
+Params  Y1Values  Balance     Balance     Black  c 
+end
+**2 AccountsPayable Dues Chart
+Chart AccountsPayable  Bar
+Data  X1Values  =  supplier_ID  from  AccPayables  where  DocType = 53  
+Data  Y1Values  =  Balance  from  AccPayables where  DocType = 53
+Data  Y2Values  =  TotalAmt from  AccPayables where  DocType = 53
+Comment  params  LegendText    ExtName      Color  Format
+Params  X1Values  supplier     supplier_ID  Red    N
+Params  Y1Values  Balance      Balance      Black  c 
+Params  Y2Values  Total_Amount TotalAmt     Black  c
+end
+**end

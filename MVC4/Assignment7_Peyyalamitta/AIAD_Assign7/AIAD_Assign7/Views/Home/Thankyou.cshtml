@@ -1,0 +1,38 @@
+﻿@model AIAD_Assign7.Models.Ticket
+
+@{
+
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+
+
+@{
+    ViewBag.Title = "Thankyou";
+}
+
+<h2>Thankyou!!! Your ticket is Added.</h2>
+
+<table class="table-striped">
+    <tr><td>Name: </td><td> @Model.Username</td></tr>
+    <tr><td>DateOpened: </td><td> @Model.DateOpened.ToShortDateString()</td></tr>
+    <tr>
+        <td>Status: </td>
+        <td>
+            @Model.Status
+
+
+        </td>
+    </tr>
+    <tr>
+        <td>Priority: </td>
+        <td>
+            @Model.Priority
+
+        </td>
+    </tr>
+
+</table>
+
+
+

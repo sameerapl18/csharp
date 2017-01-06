@@ -1,0 +1,17 @@
+1  archive  processDocs  7/21/2016
+2  select   data1 from Inventory	
+3  select   data2 from ProcessDocs_Details  where DocType = 13 and status < 9 	
+4  select   data3 from ProcessDocs_Details  where DocType = 14 and status < 9 		
+5  copy     data1 all columns to data4
+6  copy     data1 column 5 to data4 column 5
+7  add      data2 column 5 to data4 column 5 when data2 column 2 equals data4 column 0
+8  subtract data3 column 5 from data4 column 5 when data2 column 2 equals data4 column 0 	
+9  verify   data4 column 5 using data1 column 5 + data2 column 5 - data3 column 5
+10 pause
+11 if       verify failed  then exit step 11	
+12 archive  Acc_Receivable  from  data4 	
+13 update   ProcessDocs records to status 9 from  data2	
+14 update   ProcessDocs records to status 9 from  data3 	
+15 update   ProcessDocs records to status 9 from  data4
+16 remove   status 9 records from processDocs	
+17 end	

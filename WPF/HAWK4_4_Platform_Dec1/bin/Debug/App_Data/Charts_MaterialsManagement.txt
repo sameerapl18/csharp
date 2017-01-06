@@ -1,0 +1,39 @@
+**1 PurchaseOrders Chart
+Chart PurchaseOrders  Bar
+Data  X1Values  =  DocNum from PurchaseOrders where DocType = 13
+Data  Y1Values  =  List_Price from PurchaseOrders where DocType = 13
+Comment  params  LegendText  ExtName  Color  Format
+Params  X1Values  PurchaseOrder DocNum black N
+Params  Y1Values  Price List_Price Red C
+end
+**2 InventoryCamera Dues Chart
+Chart InventoryCamera  Bar
+Data  X1Values  =  DocNum from Inventory where category = 'Camera'
+Data  Y1Values  =  Maximum from Inventory where category = 'Camera'
+Data  Y2Values  =  PresentQuantity from Inventory where category = 'Camera'
+Comment  params  LegendText    ExtName      Color  Format
+Params  X1Values  Inventory DocNum black N
+Params  Y1Values  MaxQuantity DocNum Red C
+Params  Y2Values  PresentQuantity DocNum Blue C
+end
+**3 InventoryLens Dues Chart
+Chart InventoryCamera  Bar
+Data  X1Values  =  DocNum from Inventory where category = 'Lens'
+Data  Y1Values  =  Maximum from Inventory where category = 'Lens'
+Data  Y2Values  =  PresentQuantity from Inventory where category = 'Lens'
+Comment  params  LegendText    ExtName      Color  Format
+Params  X1Values  Inventory DocNum black N
+Params  Y1Values  MaxQuantity DocNum Red C
+Params  Y2Values  PresentQuantity DocNum Blue C
+end
+**4 InventoryEquipment Dues Chart
+Chart InventoryEquipment  Bar
+Data  X1Values  =  DocNum from Inventory where category = 'Equipment'
+Data  Y1Values  =  Maximum from Inventory where category = 'Equipment'
+Data  Y2Values  =  PresentQuantity from Inventory where category = 'Equipment'
+Comment  params  LegendText    ExtName      Color  Format
+Params  X1Values  Inventory DocNum black N
+Params  Y1Values  MaxQuantity DocNum Red C
+Params  Y2Values  PresentQuantity DocNum Blue C
+end
+**end

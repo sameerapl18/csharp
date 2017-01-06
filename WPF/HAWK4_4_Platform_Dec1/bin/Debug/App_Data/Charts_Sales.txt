@@ -1,0 +1,13 @@
+**1  Actual and Final Sales By Sales Order 
+Chart  ActualAndFinalSales   Bar 
+Data X1Values =  DocNum from SalesOrders  where DocType = 21
+Data Y1Values =  ActualPrice from SalesOrders  where DocType = 21
+Data Y2Values =  FinalPrice from SalesOrders  where DocType = 21
+comment params LegendText      extname  color   format
+Params X1Values SalesOrder     DocNum   black    N
+Params Y1Values ActualPrice  ActualPrice  blue   N
+Params Y2Values FinalPrice    FinalPrice  red   N
+Y1Var | Estimated , EstCost , Red , c
+Y2var | Actual , ActualCost , Blue , C
+end
+**end

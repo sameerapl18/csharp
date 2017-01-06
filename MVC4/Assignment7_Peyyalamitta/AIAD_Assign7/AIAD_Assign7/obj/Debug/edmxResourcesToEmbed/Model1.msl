@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="TicketTables">
+      <EntityTypeMapping TypeName="Database1Model.TicketTable">
+        <MappingFragment StoreEntitySet="TicketTable">
+          <ScalarProperty Name="DateClosed" ColumnName="DateClosed" />
+          <ScalarProperty Name="DateOpened" ColumnName="DateOpened" />
+          <ScalarProperty Name="DateResolved" ColumnName="DateResolved" />
+          <ScalarProperty Name="Resolution" ColumnName="Resolution" />
+          <ScalarProperty Name="AdditionalComments" ColumnName="AdditionalComments" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="ProbDesc" ColumnName="ProbDesc" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="TicketId" ColumnName="TicketId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

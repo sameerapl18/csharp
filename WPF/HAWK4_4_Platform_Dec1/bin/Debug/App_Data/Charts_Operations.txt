@@ -1,0 +1,18 @@
+**1  Chart  Project_Actual_and_Estimated_Cost_By_Month  Bar  yparams  2
+Data  X1Values  =  DocType  from  ProjectsEstByMonth  where  DocNum  =  301
+Data  Y1Values  =  CumCost  from  ProjectsEstByMonth  where  DocNum  =  301
+Data  Y2Values  =  CumCost  from  ProjectsActualByMonth  where  DocNum  =  301
+Comment  params  LegendText  ExtName  Color  Format
+Params  X1Values  Month  DocType  Black  N
+Params  Y1Values  Estimated  DocType  Red  c
+Params  Y2Values  Actual  DocType  Blue  C
+end
+**2  Chart  Project_Actual_Cost_By_Month  Bar  yparams  1
+Data  X1Values  =  DocType  from  ProjectsActualByMonth  where  DocNum  =  301
+Data  Y1Values  =  CumCost  from  ProjectsActualByMonth  where  DocNum  =  301
+Comment  params  LegendText  ExtName  Color  Format
+Params  X1Values  Month  DocType  Black  N
+Params  Y1Values  Actual  DocType  Red  c
+end
+**end
+

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>@Page.Title</title>
+        
+
+
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    </head>
+<body>
+
+
+
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        
+                        <a class="navbar-brand" href="~/Home">BuyYourVehicle</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Vehicles For Sale", "VehiclesForSale", "Home")</li>
+                        <li>@Html.ActionLink("Contact Us", "ContactUs", "Home")</li>
+                    </ul>
+                </div>
+            </nav>
+
+
+           
+
+            <div class="col-md-12">
+
+
+                @RenderBody()
+
+
+            </div>
+
+
+        </div>
+
+        
+
+            
+        
+
+
+        <footer class="jumbotron">
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+
+    </div>
+    <script src="~/Scripts/jquery-2.2.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+
+
+</html>

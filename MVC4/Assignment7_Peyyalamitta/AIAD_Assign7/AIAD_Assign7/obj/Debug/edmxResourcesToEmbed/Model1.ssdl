@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TicketTable">
+    <Key>
+      <PropertyRef Name="TicketId" />
+    </Key>
+    <Property Name="TicketId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProbDesc" Type="varchar" MaxLength="500" />
+    <Property Name="Priority" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="AdditionalComments" Type="varchar" MaxLength="500" />
+    <Property Name="Resolution" Type="varchar" MaxLength="500" />
+    <Property Name="DateResolved" Type="date" />
+    <Property Name="DateOpened" Type="date" />
+    <Property Name="DateClosed" Type="date" />
+  </EntityType>
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="TicketTable" EntityType="Self.TicketTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

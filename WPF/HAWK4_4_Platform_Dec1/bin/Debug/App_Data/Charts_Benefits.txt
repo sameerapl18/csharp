@@ -1,0 +1,37 @@
+**1  Employee enrolled for a Benefit Chart
+Chart BenefitCount  Bar
+Data  X1Values  =  DocNum from  Benefits where  DocType = 61  
+Data  Y1Values  =  benefitCount  from  Benefits where  DocType = 61
+Comment  params   LegendText          ExtName      Color  Format
+Params  X1Values  Document_Number     DocNum 	    Black  N
+Params  Y1Values  BenefitsCount       benefitCount  Red    c 
+end
+**2  Benefit Percentage Chart
+Chart BenefitPerc  Bar
+Data  X1Values  =  DocNum from  Benefits where  DocType = 61  
+Data  Y1Values  =  percBenefits  from  Benefits where  DocType = 61
+Comment  params   LegendText          ExtName      Color  Format
+Params  X1Values  Document_Number     DocNum 	    Black  N
+Params  Y1Values  Benefit_Percentage  percBenefits   Red    c 
+end
+**3  Requested and Approved Benefit Count Chart
+Chart Requested&Approved  Bar
+Data  X1Values  =  DocNum from  EmployeeBenefits where  DocType = 65  
+Data  Y1Values  =  benCount  from  EmployeeBenefits where  DocType = 65
+Data  Y2Values  =  approvedCount from  EmployeeBenefits where  DocType = 65
+Comment  params   LegendText          ExtName      Color  Format
+Params  X1Values  Document_Number     DocNum 	    Black  N
+Params  Y1Values  Requested_Benefits  benCount      Red    c 
+Params  Y2Values  Approved_Benefits   approvedCount Green  c
+end
+**4  Max and Min value for a Benefit Chart
+Chart Max&Min  Bar
+Data  X1Values  =  DocNum from  Benefits where  DocType = 61  
+Data  Y1Values  =  benminval  from  Benefits where  DocType = 61
+Data  Y2Values  =  benmaxval from  Benefits where  DocType = 61
+Comment  params   LegendText          	ExtName      Color  Format
+Params  X1Values  Document_Number     	DocNum 	      Black  N
+Params  Y1Values  Min_value    		benminval     Blue   c 
+Params  Y2Values  Max_value   		benmaxval     Green  c
+end
+**end

@@ -1,0 +1,21 @@
+1  archive  processDocs with current date
+2  select   data1 from  AccountsReceivable	
+3  select   data2 from ProcessDocs  where DocType = 58 and status < 9 	
+4  select   data3 from ProcessDocs  where DocType = 59 and status < 9 		
+5  copy     data1 all columns to data4
+6  copy     data1 column 9 to data4 column 4
+7  add      data2 column 9 to data4 column 9 when data2 column 2 equals data4 column 2
+8  copy     data2 column 9 to data4 column 5 when data2 column 2 equals data4 column 2
+9  copy     current date string to data4 column 6 when data2 column 2 equals data4 column 2
+10 subtract data3 column 9 from data4 column 9 when data3 column 2 equals data4 column 2 	
+11 copy     data3 column 9 to data4 column 8 when data3 column 2 equals data4 column 2
+12 copy     current date string to data4 column 7 when data3 column 2 equals data4 column 2
+13 verify   data4 column 9 using data1 column 9 + data2 column 6 - data3 column 6
+14 pause
+15 if       verify failed  then exit 	
+16 archive  AccountsReceivable  from  data4 	
+17 update   ProcessDocs records to status 9 from  data2	
+18 update   ProcessDocs records to status 9 from  data3 	
+19 update   ProcessDocs records to status 9 from  data4
+20 remove   status 9 records from processDocs	
+21 end	

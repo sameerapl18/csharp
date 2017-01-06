@@ -1,0 +1,81 @@
+﻿@model AIAD_Assign7.Models.Ticket
+
+
+
+@{
+    ViewBag.Title = "AddTicket";
+}
+@{
+
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<h2 style="color:white">AddTicket</h2>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+
+            @using (Html.BeginForm())
+            {
+                <div style="align-content:center">
+                    <table>
+                        <tr>
+                            <td><font color="red">**</font>Username: </td>
+                            <td>
+                                @Html.TextBoxFor(x => x.Username, null, new { @class = "form-control" })
+                                <span style="color:red">
+                                    @Html.ValidationMessageFor(x => x.Username)
+                                </span>
+                            </td>
+                        </tr>
+                        <tr><td>     &nbsp;&nbsp;&nbsp;</td></tr>
+
+                        <tr>
+                            <td><font color="red">**</font>Status: </td>
+                            <td>
+                                @Html.RadioButtonFor(x => x.Status, "Open", new { @class = "radio-inline"}) Open
+                                @Html.RadioButtonFor(x => x.Status, "Closed", new { @class = "radio-inline" }) Closed
+
+                                <span style="color:red">
+                                    @Html.ValidationMessageFor(x => x.Status)
+                                </span>
+
+                            </td>
+                        </tr>
+                        <tr><td>&nbsp;&nbsp;&nbsp;</td></tr>
+                        <tr>
+                            <td><font color="red">**</font>Priority: </td>
+                            <td>
+                                @Html.RadioButtonFor(x => x.Priority, "Low", new { @class = "radio-inline" }) Low
+                                @Html.RadioButtonFor(x => x.Priority, "Medium", new { @class = "radio-inline" }) Medium
+                                @Html.RadioButtonFor(x => x.Priority, "High", new { @class = "radio-inline" }) High
+
+                                <span style="color:red">
+                                    @Html.ValidationMessageFor(x => x.Priority)
+                                </span>
+                            </td>
+                        </tr>
+                        <tr><td>&nbsp;&nbsp;&nbsp;</td></tr>
+                        <tr><td>Problem Description: </td><td> @Html.TextAreaFor(x => x.description, new { @class = "form-control" })</td></tr>
+                        <tr><td>&nbsp;&nbsp;&nbsp;</td></tr>
+                        <tr><td>Resolution: </td><td> @Html.TextAreaFor(x => x.Resolution, new { @class = "form-control" })</td></tr>
+                        <tr><td>&nbsp;&nbsp;&nbsp;</td></tr>
+                        <tr><td>Additional Comments: </td><td> @Html.TextAreaFor(x => x.AdditionalComments, new { @class = "form-control" })</td></tr>
+
+                    </table>
+                    <br /><br />
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <input class="btn-default" type="submit" value="Submit" />
+
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+
